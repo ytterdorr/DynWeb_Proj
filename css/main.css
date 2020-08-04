@@ -1,0 +1,35 @@
+.container {
+  max-width: 960px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+header {
+  width: 100%;
+  background-color: lightblue;
+  height: 20vh;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 3;
+}
+
+nav ul li {
+  background-color: rgb(62, 108, 151);
+  border-bottom: 1px solid #fffefa;
+  color: rgb(131, 93, 45);
+  text-align: center;
+}
+
+.widget {
+  flex-grow: 1;
+}
