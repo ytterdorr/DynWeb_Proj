@@ -1,0 +1,12 @@
+
+Page Content
+> Add all text to all pages.
+> Paste correct footer
+> Add images
+
+Implement Weather Widget
+
+<=> Check out SMHI API
+<=> write a getter
+<=> parse data
+> Make tables.
