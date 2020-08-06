@@ -30,6 +30,34 @@ function bulidRow(timeRow) {
   console.log(
     `kl: ${kl}: ${temp}, vind: ${vindriktning} (${vindstyrka}), himmel: ${himmel}`
   );
+  vindTD = createEl("td");
+
+  vindSVG = svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  vindSVG.setAttribute("width", "24px");
+  vindSVG.setAttribute("height", "24px");
+
+  var svgimg = document.createElementNS("http://www.w3.org/2000/svg", "image");
+  svgimg.setAttributeNS(null, "height", "18px");
+  svgimg.setAttributeNS(null, "width", "18px");
+  svgimg.setAttributeNS(
+    "http://www.w3.org/1999/xlink",
+    "href",
+    "/bilder/arrow_upward-24px.svg"
+  );
+  svgimg.setAttributeNS(null, "x", "3");
+  svgimg.setAttributeNS(null, "y", "3");
+  svgimg.setAttributeNS(null, "visibility", "visible");
+  vindSVG.setAttribute("transform", `rotate(${vindriktning})`);
+  vindSVG.appendChild(svgimg);
+  vindTD.appendChild(vindSVG);
+
+  console.log(vindTD);
+
+  row.appendChild(Object.assign(createEl("td"), { innerHTML: kl }));
+  row.appendChild(Object.assign(createEl("td"), { innerHTML: temp }));
+  row.appendChild(vindTD);
+  row.appendChild(Object.assign(createEl("td"), { innerHTML: himmel }));
+  return row;
 }
 
 function createWeatherTable(times) {
@@ -50,7 +78,7 @@ function createWeatherTable(times) {
   table.appendChild(heads);
 
   for (let row of times) {
-    bulidRow(row);
+    table.appendChild(bulidRow(row));
   }
 
   return table;
