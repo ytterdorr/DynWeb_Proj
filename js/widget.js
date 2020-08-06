@@ -8,35 +8,71 @@ function createEl(el) {
   return document.createElement(el);
 }
 
+function bulidRow(timeRow) {
+  let row = createEl("tr");
+  // console.log(timeRow.parameters);
+  let kl = new Date(timeRow.validTime).getHours();
+  let temp;
+  let vindriktning;
+  let vindstyrka;
+  let himmel;
+  for (let param of timeRow.parameters) {
+    if (param.name == "t") {
+      temp = param.values[0];
+    } else if (param.name == "wd") {
+      vindriktning = param.values[0];
+    } else if (param.name == "ws") {
+      vindstyrka = param.values[0];
+    } else if (param.name == "Wsymb2") {
+      himmel = param.values[0];
+    }
+  }
+  console.log(
+    `kl: ${kl}: ${temp}, vind: ${vindriktning} (${vindstyrka}), himmel: ${himmel}`
+  );
+}
+
+function createWeatherTable(times) {
+  // Check if there is any timedata for today.
+  if (times.length < 1) {
+    return Object.assign(createEl("p"), {
+      innerHTML: "Väderprognos visas bara till kl 18",
+    });
+  }
+
+  let table = createEl("table");
+  let heads = createEl("tr");
+
+  heads.appendChild(Object.assign(createEl("th"), { innerHTML: "KL" }));
+  heads.appendChild(Object.assign(createEl("th"), { innerHTML: "Temp" }));
+  heads.appendChild(Object.assign(createEl("th"), { innerHTML: "Vind" }));
+  heads.appendChild(Object.assign(createEl("th"), { innerHTML: "Himmel" }));
+  table.appendChild(heads);
+
+  for (let row of times) {
+    bulidRow(row);
+  }
+
+  return table;
+}
+
 function buildWidget(todayTimes, tomorrowTimes) {
+  // Create Headings
   const todayHeading = createEl("h3");
   todayHeading.innerHTML = "Idag";
   const tomorrowHeading = createEl("h3");
   tomorrowHeading.innerHTML = "Imorgon";
 
-  let tomorrowTable = createEl("table");
-  let tomorrowHeads = createEl("tr");
-  const kl = Object.assign(createEl("th"), { innerHTML: "KL" });
-  const temp = Object.assign(createEl("th"), { innerHTML: "Temp" });
-  const vind = Object.assign(createEl("th"), { innerHTML: "Vind" });
-  const himmel = Object.assign(createEl("th"), { innerHTML: "Himmel" });
+  // Create tables
+  let todayTable = createWeatherTable(todayTimes);
+  let tomorrowTable = createWeatherTable(tomorrowTimes);
 
-  tomorrowHeads.appendChild(kl);
-  tomorrowHeads.appendChild(temp);
-  tomorrowHeads.appendChild(vind);
-  tomorrowHeads.appendChild(himmel);
-
+  // Insert everything
   widget.appendChild(todayHeading);
-
+  widget.appendChild(todayTable);
   widget.appendChild(tomorrowHeading);
-  widget.appendChild(tomorrowHeads);
-  // if (todayTimes.length() > 0) {
-  //   let todayTable = document.createElement("table");
-  //   today;
-  // }
+  widget.appendChild(tomorrowTable);
 }
-
-function bulidRow(timeSeriesRow) {}
 
 function handleData(data) {
   let thisDay = new Date(data.timeSeries[0].validTime);

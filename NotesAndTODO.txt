@@ -9,4 +9,5 @@ Implement Weather Widget
 <=> Check out SMHI API
 <=> write a getter
 <=> parse data
-> Make tables.
+=> Make tables
+> Make data rows
