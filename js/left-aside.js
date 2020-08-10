@@ -13,7 +13,5 @@ leftSide.innerHTML = `
     <a href="/html/english.html"><li>English</li></a>
   </ul>
 </nav>
-<footer>
-  Is it OK to call this footer?
-</footer>
+  <p>Some text?</p>
 `;

@@ -14,6 +14,10 @@ Grönt (Träd och gräs):​ 406700
 .
 ,
 */
+.comment {
+  color: red;
+}
+
 :root {
   --blue3: #323755;
   --blue2: #6e8aa0;
@@ -25,6 +29,10 @@ Grönt (Träd och gräs):​ 406700
   --green1: #406700;
   --green2: #b3b106;
   --green3: #8c9401;
+}
+
+body {
+  background-color: var(--white1);
 }
 
 h1,
@@ -44,13 +52,14 @@ td {
   min-width: 100px;
 }
 
+/* for the weather app*/
+td > p {
+  display: inline-block;
+}
+
 svg {
   display: inline;
   transform-origin: center;
-}
-
-td > p {
-  display: inline-block;
 }
 
 picture {
@@ -62,8 +71,18 @@ img {
   display: block;
 }
 
-body {
-  background-color: var(--white1);
+ul {
+  list-style-type: disc;
+}
+
+dt {
+  font-weight: 600;
+  margin-top: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+dd {
+  display: block;
+  margin-inline-start: 20px;
 }
 
 .container {
@@ -85,7 +104,8 @@ header {
 
 .left-side {
   width: 20%;
-  height: 200px;
+  min-height: 200px;
+  height: fit-content;
   max-width: 150px;
   background-color: var(--blue1);
   position: -webkit-sticky; /* Safari */
@@ -100,6 +120,11 @@ footer {
 
 nav {
   width: 100%;
+  height: fit-content;
+}
+nav ul {
+  height: fit-content;
+  text-decoration: none;
 }
 
 nav ul li {
@@ -107,6 +132,8 @@ nav ul li {
   border-bottom: 1px solid #fffefa;
   color: yellow;
   text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
 }
 
 nav ul li:hover {
@@ -122,11 +149,16 @@ main {
   padding: 20px;
 }
 
-.side-widget {
+.side-widget,
+.widget {
   width: 20%;
   border: 1px solid var(--green1);
   background-color: var(--green3);
   border-radius: 5px;
   max-height: 300px;
-  /* display: none; */
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
 }
