@@ -40,6 +40,19 @@ p {
   margin: 5px;
 }
 
+td {
+  min-width: 100px;
+}
+
+svg {
+  display: inline;
+  transform-origin: center;
+}
+
+td > p {
+  display: inline-block;
+}
+
 picture {
   width: 100%;
 }

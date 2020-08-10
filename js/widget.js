@@ -30,29 +30,35 @@ function bulidRow(timeRow) {
   console.log(
     `kl: ${kl}: ${temp}, vind: ${vindriktning} (${vindstyrka}), himmel: ${himmel}`
   );
+
   vindTD = createEl("td");
 
+  // Create wind direction arrow
   vindSVG = svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  vindSVG.setAttribute("width", "24px");
-  vindSVG.setAttribute("height", "24px");
+  vindSVG.setAttribute("width", "1.1rem");
+  vindSVG.setAttribute("height", "1.1rem");
 
   var svgimg = document.createElementNS("http://www.w3.org/2000/svg", "image");
-  svgimg.setAttributeNS(null, "height", "18px");
-  svgimg.setAttributeNS(null, "width", "18px");
+  svgimg.setAttributeNS(null, "height", "1.1rem");
+  svgimg.setAttributeNS(null, "width", "1.1rem");
   svgimg.setAttributeNS(
     "http://www.w3.org/1999/xlink",
     "href",
     "/bilder/arrow_upward-24px.svg"
   );
-  svgimg.setAttributeNS(null, "x", "3");
-  svgimg.setAttributeNS(null, "y", "3");
+  svgimg.setAttributeNS(null, "x", "0");
+  svgimg.setAttributeNS(null, "y", "0");
   svgimg.setAttributeNS(null, "visibility", "visible");
   vindSVG.setAttribute("transform", `rotate(${vindriktning})`);
   vindSVG.appendChild(svgimg);
   vindTD.appendChild(vindSVG);
+  vindTD.appendChild(
+    Object.assign(createEl("p"), { innerHTML: `(${vindstyrka})` })
+  );
 
   console.log(vindTD);
 
+  // insert all row elements.
   row.appendChild(Object.assign(createEl("td"), { innerHTML: kl }));
   row.appendChild(Object.assign(createEl("td"), { innerHTML: temp }));
   row.appendChild(vindTD);
