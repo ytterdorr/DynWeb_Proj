@@ -120,6 +120,8 @@ form fieldset {
   border-radius: 0.3rem;
   padding: 1rem;
   margin: auto;
+  width: 100%
+  max-width: 500px;
 }
 
 form textarea {
@@ -214,6 +216,7 @@ nav ul li {
   padding: 0.5rem;
   text-decoration: none;
   list-style-type: none;
+  font-weight: bold;
   /* border-radius: 0.3rem; */
 }
 
@@ -230,11 +233,10 @@ main {
   padding: 20px;
 }
 
-.side-widget,
-.widget {
+.side-widget,{
   width: 20%;
   border: 1px solid var(--green1);
-  background-color: var(--green3);
+  background-color: var(--brown2);
   border-radius: 5px;
   max-height: 300px;
   /* display: none; */
@@ -270,6 +272,51 @@ figure figcaption {
 
 nav a {
   text-decoration: none;
+}
+
+
+
+/* Formuläret */
+#contact-form {
+  width: 100%;
+}
+.skicka-knapp {
+  width: 100%;
+  background-color: var(--blue1);
+  color: var(--white1); 
+  font-size: 1.5rem;
+  padding: 0.3rem;
+}
+
+.skicka-knapp:hover {
+  background-color: var(--blue2);
+}
+form p {
+  box-sizing: border-box;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border: 1px solid var(--blue3);
+}
+
+form legend {
+  font-size: 2rem;
+  font-weight: bold;
+  /* display: none; */
+}
+
+select {
+  width: 100%;
+  height: 1.5rem;
+  background-color: var(--white2);
+  margin-top: 0.3rem;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 1000px) {

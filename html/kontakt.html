@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/main.css" />
@@ -31,8 +31,8 @@
             Eksta Hägur 170<br />
             623 54 Klintehamn<br />
           </p>
-          <h3>Kontaktformulär</h3>
-          <p class="comment">
+          <!-- <h3>Kontaktformulär</h3> -->
+          <!-- <p class="comment">
             Sånt vi vill få in svar på är:
           </p>
           <ul>
@@ -45,19 +45,19 @@
           </ul>
           <p class="comment">
             Kanske att du kommer på något mer som är relevant?
-          </p>
+          </p> -->
 
           <form id="contact-form">
             <fieldset>
               <legend>Kontaktformulär</legend>
               <p>
-                <label for="rubrik-input">Ärenderubrik</label>
+                <label for="rubrik-input">Ärenderubrik*</label>
                 <input type="text" name="rubrik" id="rubrik-input" required />
               </p>
 
               <p>
                 <label for="arende-typ"
-                  >Vad gäller ärendet? (Båtplats/Medlem/Övrigt)</label
+                  >Vad gäller ärendet?* <br />(Båtplats/Medlem/Övrigt)</label
                 >
 
                 <select id="arende-typ" name="arende-typ" required>
@@ -69,17 +69,23 @@
               </p>
 
               <p>
-                <label for="beskrivning">Beskrivning av ärendet</label>
-                <textarea type="text" name="beskrivning" required>
+                <label for="beskrivning">Beskrivning av ärendet*</label>
+                <textarea
+                  type="text"
+                  name="beskrivning"
+                  id="beskrivning"
+                  required
+                >
 Text</textarea
                 >
               </p>
 
               <p>
-                <label for="contact"
-                  >Hur vill du att vi ska kontakta dig? (Telefon/Epost)</label
+                <label for="contact-select"
+                  >Hur vill du att vi ska kontakta dig? <br />(Telefon/Epost/Ej
+                  kontakt)*</label
                 >
-                <select id="contact" name="contact" required>
+                <select id="contact-select" name="contact-select" required>
                   <option value="">Välj...</option>
                   <option value="epost">Epost</option>
                   <option value="telefon">Telefon</option>
@@ -87,10 +93,11 @@ Text</textarea
                 </select>
               </p>
 
-              <p>
-                <label for="epost">epost</label>
-                <input type="email" name="epost" id="epost-input" required />
+              <p class="contact-method">
+                <!-- <label for="telefon-input">Telefonnummer</label>
+                <input type="tel" name="telefon" id="telefon-input" /> -->
               </p>
+              <button type="submit" class="skicka-knapp">Skicka</button>
             </fieldset>
           </form>
         </main>
