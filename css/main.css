@@ -22,8 +22,9 @@ Grönt (Träd och gräs):​ 406700
   --blue3: #323755;
   --blue2: #6e8aa0;
   --blue1: #55708e;
+  --blue4: #a1bedf;
   --brown1: #7b3a10;
-  --brown2: #da8f29;
+  --brown2: #eead51;
   --white1: #f7e5d1;
   --white2: #fffefa;
   --green1: #406700;
@@ -233,11 +234,11 @@ main {
   padding: 20px;
 }
 
-.side-widget,{
+.side-widget {
   width: 20%;
-  border: 1px solid var(--green1);
-  background-color: var(--brown2);
-  border-radius: 5px;
+  border: 2px solid var(--blue3);
+  background-color: var(--blue2);
+  border-radius: 2rem;
   max-height: 300px;
   /* display: none; */
 }
