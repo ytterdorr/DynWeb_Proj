@@ -31,8 +31,13 @@ Grönt (Träd och gräs):​ 406700
   --green3: #8c9401;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   background-color: var(--white1);
+  font-size: 
 }
 
 h1,
@@ -44,8 +49,23 @@ h4 {
   font-weight: bold;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem; 
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
 p {
-  margin: 5px;
+  margin: 0.5rem;
+  line-height: 1.2rem;
+  font-size: 1.1rem;
+  /* margin-bottom: ; */
 }
 
 td {
@@ -85,6 +105,33 @@ dd {
   margin-inline-start: 20px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+form fieldset {
+  border: 1px solid var(--brown1);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin: auto;
+}
+
+form textarea {
+  height: 5rem;
+}
+
+label {
+  /* margin-top: 0.5rem; */
+  vertical-align: top;
+  display: block;
+}
+
 .container {
   max-width: 900px;
   margin: auto;
@@ -92,9 +139,34 @@ dd {
 }
 
 header {
+  position: relative;
   width: 100%;
   background-color: var(--blue2);
   height: 20vh;
+  /*Sjöbodar och lite vatten*/
+  background-image: url(/bilder/D-12.jpg); 
+  background-position: 50% 58%;
+
+  /* klippa
+  background-image: url(/bilder/D-13.jpg);
+  background-position: 50% 80%;   */
+  /* Livboj */
+  background-image: url(/bilder/D-15.jpg);
+  background-position: 50% 43%; 
+
+  background-size: cover;
+  /* text-align-last: center;  */
+
+}
+
+header h1 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: var(--white1);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+
 }
 
 .content-container {
@@ -107,15 +179,20 @@ header {
   min-height: 200px;
   height: fit-content;
   max-width: 150px;
-  background-color: var(--blue1);
+  background-color: var(--brown1);
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
 }
 
 footer {
-  position: absolute;
   bottom: 0;
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: var(--white1);
 }
 
 nav {
@@ -125,15 +202,19 @@ nav {
 nav ul {
   height: fit-content;
   text-decoration: none;
+  /* border-radius: 0.3rem; */
+
 }
 
 nav ul li {
-  background-color: var(--blue1);
+  background-color: var(--brown1);
   border-bottom: 1px solid #fffefa;
-  color: yellow;
+  color: var(--white1);
   text-align: center;
   padding: 0.5rem;
   text-decoration: none;
+  list-style-type: none;
+  /* border-radius: 0.3rem; */
 }
 
 nav ul li:hover {
@@ -144,7 +225,7 @@ main {
   width: 60%;
   flex-grow: 1;
   background-color: var(--white2);
-  border: 1px solid var(--brown1);
+  border: 2px solid var(--brown1);
   border-radius: 5px;
   padding: 20px;
 }
@@ -156,9 +237,53 @@ main {
   background-color: var(--green3);
   border-radius: 5px;
   max-height: 300px;
+  /* display: none; */
+}
+
+.side-widget {
   display: none;
+}
+
+.widget {
+  width: 400px;
+  background-color: skyblue;
+  border: 1px solid var(--brown1);
+  border-radius 5px;
+  margin: auto;
+  padding: 5px;
+}
+
+.widget td {
+  text-align: center;
+}
+
+figure {
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+figure figcaption {
+  margin: 1rem;
+  font-style: italic;
 }
 
 nav a {
   text-decoration: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .side-widget {
+    display: block;
+  }
+
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .left-side {
+    display: none;
+  }
 }

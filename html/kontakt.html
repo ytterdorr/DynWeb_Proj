@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <script src="../js/left-aside.js" defer></script>
+    <script src="/js/kontaktform.js" defer></script>
   </head>
   <body>
     <div class="container">
       <header>
-        <h4>This will be the header</h4>
+        <h1>Djupviks Hamn</h1>
       </header>
       <div class="content-container">
         <aside class="left-side"></aside>
@@ -45,8 +46,55 @@
           <p class="comment">
             Kanske att du kommer på något mer som är relevant?
           </p>
+
+          <form id="contact-form">
+            <fieldset>
+              <legend>Kontaktformulär</legend>
+              <p>
+                <label for="rubrik-input">Ärenderubrik</label>
+                <input type="text" name="rubrik" id="rubrik-input" required />
+              </p>
+
+              <p>
+                <label for="arende-typ"
+                  >Vad gäller ärendet? (Båtplats/Medlem/Övrigt)</label
+                >
+
+                <select id="arende-typ" name="arende-typ" required>
+                  <option value="">Välj...</option>
+                  <option value="batplats">Båtplats</option>
+                  <option value="medlem">Medlem</option>
+                  <option value="ovrigt">Övrigt</option>
+                </select>
+              </p>
+
+              <p>
+                <label for="beskrivning">Beskrivning av ärendet</label>
+                <textarea type="text" name="beskrivning" required>
+Text</textarea
+                >
+              </p>
+
+              <p>
+                <label for="contact"
+                  >Hur vill du att vi ska kontakta dig? (Telefon/Epost)</label
+                >
+                <select id="contact" name="contact" required>
+                  <option value="">Välj...</option>
+                  <option value="epost">Epost</option>
+                  <option value="telefon">Telefon</option>
+                  <option value="none">Vill inte bli kontaktad</option>
+                </select>
+              </p>
+
+              <p>
+                <label for="epost">epost</label>
+                <input type="email" name="epost" id="epost-input" required />
+              </p>
+            </fieldset>
+          </form>
         </main>
-        <aside class="widget">Widget</aside>
+        <aside class="side-widget">Widget</aside>
       </div>
     </div>
   </body>

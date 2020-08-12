@@ -13,5 +13,8 @@ leftSide.innerHTML = `
     <a href="/html/english.html"><li>English</li></a>
   </ul>
 </nav>
-  <p>Some text?</p>
+  <footer>
+    <p>©Djupvikshamn.se <br/>
+    info@djupvikshamn.se</p>
+  </footer>
 `;
