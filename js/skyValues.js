@@ -1,4 +1,4 @@
-const SKY_VALUES = {
+const SKY_VALUES_ENGLISH = {
   1: "Clear sky",
   2: "Nearly clear sky",
   3: "Variable cloudiness",
@@ -26,6 +26,36 @@ const SKY_VALUES = {
   25: "Light snowfall",
   26: "Moderate snowfall",
   27: "Heavy snowfall",
+};
+
+const SKY_VALUES = {
+  1: "Klar himmel",
+  2: "Nästan klart",
+  3: "Växlande molnighet",
+  4: "Halvklart",
+  5: "Molnigt",
+  6: "Mulet",
+  7: "Dimma",
+  8: "Lätta skurar",
+  9: "Måttliga skurar",
+  10: "Kraftiga skurar",
+  11: "Åskväder",
+  12: "Lätta skurar snöblandat regn",
+  13: "skurar av snöblandat regn",
+  14: "Kraftiga skurar snöblandat regn",
+  15: "Lätta snöbyar",
+  16: "Snöbyar",
+  17: "Kraftig snöby",
+  18: "Lätt regn",
+  19: "Måttligt regn",
+  20: "Kraftigt regn",
+  21: "Åska",
+  22: "Lätt snöblandat regn",
+  23: "Måttligt snöblandat regn",
+  24: "Kraftigt snöblandat regn",
+  25: "Lätt snöfall",
+  26: "Måttligt snöfall",
+  27: "Kraftigt snöfall",
 };
 
 export default SKY_VALUES;

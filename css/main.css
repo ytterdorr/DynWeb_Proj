@@ -14,6 +14,21 @@ Grönt (Träd och gräs):​ 406700
 .
 ,
 */
+@font-face {
+  font-family: "Rowdies Regular";
+  src: url("/fonts/Rowdies/Rowdies-Regular.ttf")
+}
+
+@font-face {
+  font-family: "Rowdies Bold";
+  src: url("/fonts/Rowdies/Rowdies-Bold.ttf")
+}
+
+@font-face {
+  font-family: Caveat;
+  src: url("/fonts/Caveat/Caveat-Bold.ttf")
+}
+
 .comment {
   color: red;
 }
@@ -41,17 +56,24 @@ body {
   font-size: 
 }
 
-h1,
 h2,
 h3,
 h4 {
   margin-top: 10px;
   margin-bottom: 5px;
-  font-weight: bold;
+  /* font-weight: bold; */
+  /* font-family: Caveat, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
+  font-family: "Rowdies Bold", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3, h4 {
+  /* font-family: Caveat; */
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: normal;
+  font-family: "Rowdies Bold", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2 {
@@ -112,17 +134,19 @@ form {
   width: 80%;
   align-items: center;
   justify-content: center;
+  box-shadow: 5px;
   
 
 }
 
 form fieldset {
-  border: 1px solid var(--brown1);
+  border: 2px solid var(--brown1);
   border-radius: 0.3rem;
   padding: 1rem;
   margin: auto;
-  width: 100%
-  max-width: 500px;
+  width: 100%;
+  max-width: 400px;
+
 }
 
 form textarea {
@@ -195,6 +219,7 @@ footer {
 
 footer p {
   font-size: 0.8rem;
+  font-family: sans-serif;
   color: var(--white1);
 }
 
@@ -217,7 +242,8 @@ nav ul li {
   padding: 0.5rem;
   text-decoration: none;
   list-style-type: none;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-family: "Rowdies Regular";
   /* border-radius: 0.3rem; */
 }
 
@@ -236,7 +262,7 @@ main {
 
 .side-widget {
   width: 20%;
-  border: 2px solid var(--blue3);
+  border: 2px solid white;
   background-color: var(--blue2);
   border-radius: 2rem;
   max-height: 300px;
@@ -249,15 +275,51 @@ main {
 
 .widget {
   width: 400px;
-  background-color: skyblue;
-  border: 1px solid var(--brown1);
+  background-color:  var(--white1);
+  border: 2px solid var(--brown1);
   border-radius 5px;
   margin: auto;
   padding: 5px;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 4px 1px var(--blue1);
+  padding: 1rem;
+}
+
+.widget table {
+}
+
+.widget>table>:nth-child(even) {
+  background-color: var(--blue1)
+}
+
+.widget>table>:nth-child(3) {
+  background-color: var(--blue2);
+}
+
+.widget tbody {
+  border: 3px solid white;
 }
 
 .widget td {
   text-align: center;
+  border-bottom: 2px solid white;
+  color: var(--white2)
+}
+
+.widget th {
+  font-family: Caveat;
+  font-size: 1.3rem;
+  color: var(--blue1);
+  border-bottom: 2px solid white;
+}
+
+
+
+.widget h2 {
+  color: var(--blue1);
+  margin: auto;
+  font-family: Caveat, sans-serif
 }
 
 figure {
@@ -287,6 +349,7 @@ nav a {
   color: var(--white1); 
   font-size: 1.5rem;
   padding: 0.3rem;
+  margin-top: 0.4rem;
 }
 
 .skicka-knapp:hover {
@@ -333,5 +396,27 @@ select {
 @media screen and (max-width: 700px) {
   .left-side {
     display: none;
+  }
+
+  header {
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
