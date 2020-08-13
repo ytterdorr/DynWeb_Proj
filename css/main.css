@@ -16,21 +16,22 @@ Grönt (Träd och gräs):​ 406700
 */
 @font-face {
   font-family: "Rowdies Regular";
-  src: url("/fonts/Rowdies/Rowdies-Regular.ttf")
+  src: url("/fonts/Rowdies/Rowdies-Regular.ttf");
 }
 
 @font-face {
   font-family: "Rowdies Bold";
-  src: url("/fonts/Rowdies/Rowdies-Bold.ttf")
+  src: url("/fonts/Rowdies/Rowdies-Bold.ttf");
 }
 
 @font-face {
   font-family: Caveat;
-  src: url("/fonts/Caveat/Caveat-Bold.ttf")
+  src: url("/fonts/Caveat/Caveat-Bold.ttf");
 }
 
 .comment {
   color: red;
+  display: none;
 }
 
 :root {
@@ -53,7 +54,7 @@ html {
 
 body {
   background-color: var(--white1);
-  font-size: 
+  font-size: ;
 }
 
 h2,
@@ -63,10 +64,11 @@ h4 {
   margin-bottom: 5px;
   /* font-weight: bold; */
   /* font-family: Caveat, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
-  font-family: "Rowdies Bold", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Rowdies Bold", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h3, h4 {
+h3,
+h4 {
   /* font-family: Caveat; */
 }
 
@@ -77,7 +79,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 
 h3 {
@@ -135,8 +137,6 @@ form {
   align-items: center;
   justify-content: center;
   box-shadow: 5px;
-  
-
 }
 
 form fieldset {
@@ -146,7 +146,6 @@ form fieldset {
   margin: auto;
   width: 100%;
   max-width: 400px;
-
 }
 
 form textarea {
@@ -160,6 +159,7 @@ label {
 }
 
 .container {
+  /* position: relative; */
   max-width: 900px;
   margin: auto;
   border-radius: 5px;
@@ -169,9 +169,9 @@ header {
   position: relative;
   width: 100%;
   background-color: var(--blue2);
-  height: 20vh;
+  height:6rem;
   /*Sjöbodar och lite vatten*/
-  background-image: url(/bilder/D-12.jpg); 
+  background-image: url(/bilder/D-12.jpg);
   background-position: 50% 58%;
 
   /* klippa
@@ -179,11 +179,10 @@ header {
   background-position: 50% 80%;   */
   /* Livboj */
   background-image: url(/bilder/D-15.jpg);
-  background-position: 50% 43%; 
+  background-position: 50% 43%;
 
   background-size: cover;
   /* text-align-last: center;  */
-
 }
 
 header h1 {
@@ -193,10 +192,10 @@ header h1 {
   color: var(--white1);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-
 }
 
 .content-container {
+  position: relative;
   display: flex;
   width: 100%;
 }
@@ -211,6 +210,10 @@ header h1 {
   position: sticky;
   top: 0;
   border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+.left-side .menu-button {
+  transition-duration: 2.5s;
 }
 
 footer {
@@ -231,7 +234,6 @@ nav ul {
   height: fit-content;
   text-decoration: none;
   /* border-radius: 0.3rem; */
-
 }
 
 nav ul li {
@@ -258,6 +260,7 @@ main {
   border: 2px solid var(--brown1);
   border-radius: 5px;
   padding: 20px;
+  margin-bottom: 10vh;
 }
 
 .side-widget {
@@ -275,9 +278,8 @@ main {
 
 .widget {
   width: 400px;
-  background-color:  var(--white1);
+  background-color: var(--white1);
   border: 2px solid var(--brown1);
-  border-radius 5px;
   margin: auto;
   padding: 5px;
   text-align: center;
@@ -286,14 +288,18 @@ main {
   padding: 1rem;
 }
 
+.widget h3 {
+  color: black;
+}
+
 .widget table {
 }
 
-.widget>table>:nth-child(even) {
-  background-color: var(--blue1)
+.widget > table > :nth-child(even) {
+  background-color: var(--blue1);
 }
 
-.widget>table>:nth-child(3) {
+.widget > table > :nth-child(3) {
   background-color: var(--blue2);
 }
 
@@ -304,7 +310,8 @@ main {
 .widget td {
   text-align: center;
   border-bottom: 2px solid white;
-  color: var(--white2)
+  color: var(--white2);
+  font-family: sans-serif;
 }
 
 .widget th {
@@ -314,12 +321,11 @@ main {
   border-bottom: 2px solid white;
 }
 
-
-
 .widget h2 {
   color: var(--blue1);
   margin: auto;
-  font-family: Caveat, sans-serif
+  font-family: Caveat, sans-serif;
+  font-size: 2.5rem;
 }
 
 figure {
@@ -337,8 +343,6 @@ nav a {
   text-decoration: none;
 }
 
-
-
 /* Formuläret */
 #contact-form {
   width: 100%;
@@ -346,7 +350,7 @@ nav a {
 .skicka-knapp {
   width: 100%;
   background-color: var(--blue1);
-  color: var(--white1); 
+  color: var(--white1);
   font-size: 1.5rem;
   padding: 0.3rem;
   margin-top: 0.4rem;
@@ -359,7 +363,9 @@ form p {
   box-sizing: border-box;
 }
 
-form input, form textarea, form select {
+form input,
+form textarea,
+form select {
   width: 100%;
   box-sizing: border-box;
   font-size: 1rem;
@@ -393,30 +399,99 @@ select {
   }
 }
 
-@media screen and (max-width: 700px) {
+.menu-button {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  /* top: -15rem; */
+  left: -0.5rem;
+  width: 2rem;
+  height: 6rem;
+  background-color: var(--brown1);
+  z-index: 1;
+  border-radius: 0 3rem 3rem 0;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-left: none;
+}
+
+.menu-button>div { 
+  background-color: white;
+  height: 0.2rem;
+  width: 1.5rem;
+  margin: 0.2rem;
+  display: block;
+  border-radius; 0.1rem;
+  color: var(--brown1);
+
+}
+
+.close-menu-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white1);
+  background-color: white;
+  opacity: 0.5;
+  /* display: none; */
+  z-index: 1;
+}
+  
+/* Mobile screen Portrait mode */
+@media screen and (max-width: 600px) {
   .left-side {
-    display: none;
+    position: fixed;
+    left: -80vw;
+    top: 2vh;
+    width: 80vw;
+    height: 80vh;
+    max-width: none;
+    max-height: 80vh;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    border-left: none;
+    z-index: 2
+
+  }
+
+  .left-side.show-menu {
+    left: 0;
+  }
+
+  .left-side nav {
+    width: 100%;
+  }
+
+  .left-side li {
+    padding: 1rem;
+  }
+
+  .menu-button {
+    left: 0vw;
+  }
+
+  .menu-button.show-menu {
+    left: 80vw;
+  }
+
+  footer {
+    font-size: 2rem;
   }
 
   header {
-    height: 100px;
+    height: 10rem;
+  }
+
+  main {
+    /* margin-left: 1rem; */
+    padding-left: 3rem;
+    margin-bottom: 0;
   }
 
   h1 {
-    font-size: 3rem;
+    3rem;
   }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
+  
 }

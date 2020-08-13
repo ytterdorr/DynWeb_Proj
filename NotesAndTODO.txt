@@ -9,6 +9,8 @@ https://code.tutsplus.com/tutorials/20-html-forms-best-practices-for-beginners--
 Responsiveness
 > Hide left menu on small screen
 > different image sizes
+> Contact Form different size
+> Weather widget different size
 
 Accessibility
 > alt-texts
