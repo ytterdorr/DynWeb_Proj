@@ -31,7 +31,7 @@ Grönt (Träd och gräs):​ 406700
 
 .comment {
   color: red;
-  display: none;
+  /* display: none; */
 }
 
 :root {
@@ -171,7 +171,7 @@ header {
   background-color: var(--blue2);
   height:6rem;
   /*Sjöbodar och lite vatten*/
-  background-image: url(/bilder/D-12.jpg);
+  background-image: url(/bilder/livboj-1000x662.jpg);
   background-position: 50% 58%;
 
   /* klippa
@@ -440,6 +440,11 @@ select {
   
 /* Mobile screen Portrait mode */
 @media screen and (max-width: 600px) {
+
+  header {
+    background-image: src("../bilder/livboj-600x400.jpg")
+  }
+  
   .left-side {
     position: fixed;
     left: -80vw;
