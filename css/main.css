@@ -414,7 +414,8 @@ select {
   align-items: center;
   justify-content: center;
   border: 2px solid white;
-  border-left: none;
+  /* border-left: none; */
+  display: none;
 }
 
 .menu-button>div { 
@@ -422,7 +423,6 @@ select {
   height: 0.2rem;
   width: 1.5rem;
   margin: 0.2rem;
-  display: block;
   border-radius; 0.1rem;
   color: var(--brown1);
 
@@ -435,7 +435,6 @@ select {
   background-color: var(--white1);
   background-color: white;
   opacity: 0.5;
-  /* display: none; */
   z-index: 1;
 }
   
@@ -470,6 +469,7 @@ select {
 
   .menu-button {
     left: 0vw;
+    display: flex;
   }
 
   .menu-button.show-menu {
@@ -492,6 +492,18 @@ select {
 
   h1 {
     3rem;
+  }
+
+  .widget {
+    min-width: 0;
+    width: fit-content;
+  }
+
+  .widget td, .widget th {
+    width: fit-content;
+    padding: 3px;
+    font-size: 1rem;
+    min-width: 20px;
   }
   
 }
