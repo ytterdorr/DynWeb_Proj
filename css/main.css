@@ -171,15 +171,8 @@ header {
   width: 100%;
   background-color: var(--blue2);
   height:6rem;
-  /*Sjöbodar och lite vatten*/
-  background-image: url(/bilder/livboj-1000x662.jpg);
-  background-position: 50% 58%;
-
-  /* klippa
-  background-image: url(/bilder/D-13.jpg);
-  background-position: 50% 80%;   */
   /* Livboj */
-  background-image: url(/bilder/D-15.jpg);
+  background-image: url(/bilder/livboj-1000x662.jpg);
   background-position: 50% 43%;
 
   background-size: cover;
