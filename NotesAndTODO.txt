@@ -1,5 +1,5 @@
 VIKTIGAST
-> Driftsätt
+=o= Driftsätt (HEROKU)
   > Gör om alla länkar till relativa och lägg på ytterdorr.github.io
 
 
@@ -22,7 +22,7 @@ https://css-tricks.com/responsive-data-tables/
 
 Accessibility
 => alt-texts
-> Testa med internetverktyg
+=> Testa med internetverktyg
 > Byt vitfärg för kontrast?
 > använd article på startsidan
 
