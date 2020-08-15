@@ -60,6 +60,7 @@ body {
 h2,
 h3,
 h4 {
+  max-width: 90vw;
   margin-top: 10px;
   margin-bottom: 5px;
   /* font-weight: bold; */
@@ -385,9 +386,32 @@ select {
   margin-top: 0.3rem;
 }
 
+.medlemslista {
+  /* display: none; */
+
+}
+
+.medlemslista tr {
+  border-bottom: 1px solid black;
+}
+.medlemslista td {
+  padding: 0.3rem;
+  /* border: 1px solid black */
+  text-align: left;
+}
+
+.medlemslista th {
+  padding-left: 0.3rem;
+  text-align: left;
+  font-weight: bold;
+  /* font-family: Caveat; */
+}
+
 .hidden {
   display: none;
 }
+
+
 
 @media screen and (min-width: 1000px) {
   .side-widget {

@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <script src="../js/left-aside.js" defer></script>
+    <script
+      content-type="text/javascript"
+      src="../js/medlemmar.js"
+      type="module"
+    ></script>
   </head>
   <body>
     <!-- Fixed position meny stuff -->
@@ -23,7 +28,34 @@
       <div class="content-container">
         <aside class="left-side"></aside>
         <main>
-          This is the main part. With images
+          <h2>Medlemsinformation</h2>
+
+          <h3>Aktuellt/På Gång</h3>
+          <p>
+            Uppehåll just nu p.g.a. rådande omständigheter, men snart drar vi
+            igång igen!
+          </p>
+
+          <h3>Medlemslista</h3>
+
+          <table class="medlemslista"></table>
+
+          <div class="password-protected">
+            <p>
+              Den här informationen innehåller personuppgifter och är
+              lösenordsskyddad.
+            </p>
+            <form id="password-form">
+              <label for="member-password"></label>
+              <input
+                id="member-password"
+                name="member-password"
+                type="password"
+              /><br />
+              <div id="error-field"></div>
+              <button type="button" id="password-check-btn">Bekräfta</button>
+            </form>
+          </div>
         </main>
         <div class="side-widget">Widget</div>
       </div>

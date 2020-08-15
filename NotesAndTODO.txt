@@ -1,26 +1,36 @@
+VIKTIGAST
+> Driftsätt
+  > Gör om alla länkar till relativa och lägg på ytterdorr.github.io
+
 
 Page Content
-> Add all text to all pages.
-> Paste correct footer
-> Add images
-> Contact form
+=o= Add all text to all pages.
+=o= Paste correct footer
+=> Add images
+=o= Contact form
 https://code.tutsplus.com/tutorials/20-html-forms-best-practices-for-beginners--net-6593
 
 Responsiveness
-> Hide left menu on small screen
-> different image sizes
-> Contact Form different size
-> Weather widget different size
+> responsive table on medlem (Check canvas)
+https://css-tricks.com/responsive-data-tables/
+
+> footer does not fit
+=> different image sizes
+=o= Weather widget different size
+=o= Contact Form different size
+=o= Hide left menu on small screen
 
 Accessibility
-> alt-texts
-> 
+=> alt-texts
+> Testa med internetverktyg
+> Byt vitfärg för kontrast?
+> använd article på startsidan
 
 Implement Weather Widget
-
-<=> Check out SMHI API
-<=> write a getter
-<=> parse data
-=> Make tables
-=> Make data rows
-put weather widget on Gästhamnen
+> Side-widget
+=o= Check out SMHI API
+=o= write a getter
+=o= parse data
+=o= Make tables
+=o= Make data rows
+=o= put weather widget on Gästhamnen
