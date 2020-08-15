@@ -284,21 +284,30 @@ figure figcaption {
   }
 
   .side-widget tr {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
   }
 
   .side-widget td {
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid var(--blue3);
+    padding: 2px;
+    color: var(--white2);
+  }
+
+  .side-widget th {
+    color: var(--white2);
+    text-align: center;
   }
 
   .side-widget h2 {
     font-family: Caveat;
     font-size: 1.3rem;
+    color: var(--white2);
   }
 
   .side-widget h3 {
     font-size: 1rem;
+    color: var(--white2);
   }
 
   .side-widget p {

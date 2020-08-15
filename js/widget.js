@@ -31,9 +31,6 @@ function bulidRow(timeRow) {
       himmel = param.values[0];
     }
   }
-  console.log(
-    `kl: ${kl}: ${temp}, vind: ${vindriktning} (${vindstyrka}), himmel: ${himmel}`
-  );
 
   let vindTD = createEl("td");
 
@@ -59,8 +56,6 @@ function bulidRow(timeRow) {
   vindTD.appendChild(
     Object.assign(createEl("p"), { innerHTML: `(${vindstyrka})` })
   );
-
-  console.log(vindTD);
 
   // insert all row elements.
   row.appendChild(Object.assign(createEl("td"), { innerHTML: kl }));

@@ -27,7 +27,7 @@ Accessibility
 > använd article på startsidan
 
 Implement Weather Widget
-> Side-widget
+=o= Side-widget
 =o= Check out SMHI API
 =o= write a getter
 =o= parse data
