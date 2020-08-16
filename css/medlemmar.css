@@ -23,7 +23,6 @@ and also iPads specifically.
 }
 
 @media screen and (max-width: 600px) {
-
   /* Kortare rubrik på mindre skärm */
   .sm-view {
     display: block;
@@ -37,40 +36,54 @@ and also iPads specifically.
     content: "Medlems-information";
   }
 
-  .medlemslista{
+  .medlemslista {
     width: 80%;
   }
 
-	/* Force table to not be like tables anymore */
-	.medlemslista table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	.medlemslista thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
+  /* Force table to not be like tables anymore */
+  .medlemslista table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
-	td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid black; 
-    padding-left: 50%; 
-	}
-	
-	td:before { 
-		left: 6px;
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .medlemslista thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 50%;
+  }
+
+  td:before {
+    left: 6px;
     width: 5rem;
     min-width: 5rem;
-		padding-right: 10px; 
-	}
-	
-	/*
+    padding-right: 10px;
+  }
+
+  /*
 	Label the data
 	*/
-	td:nth-of-type(1):before { content: "Förnamn:"; }
-	td:nth-of-type(2):before { content: "Efternamn:"; }
-	td:nth-of-type(3):before { content: "Epost:"; }
-	td:nth-of-type(4):before { content: "Telefon:"; }
+  td:nth-of-type(1):before {
+    content: "Förnamn:";
+  }
+  td:nth-of-type(2):before {
+    content: "Efternamn:";
+  }
+  td:nth-of-type(3):before {
+    content: "Epost:";
+  }
+  td:nth-of-type(4):before {
+    content: "Telefon:";
+  }
+}

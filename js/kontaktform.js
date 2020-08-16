@@ -1,10 +1,6 @@
 let kontakt = document.querySelector("#contact-select");
-console.log(kontakt);
 
-const form = document.querySelector("#contact-form");
-
-kontakt.addEventListener("change", function (event) {
-  console.log(kontakt.value);
+kontakt.addEventListener("change", function () {
   // hide contact method fields
   contactMethod = document.querySelector(".contact-method");
   contactMethod.innerHTML = "";
@@ -15,14 +11,4 @@ kontakt.addEventListener("change", function (event) {
     contactMethod.innerHTML = `<label for="contact-input">Telefonnummer*</label>
     <input type="tel" name="contactMethod" id="contact-input" required/>`;
   }
-
-  //   contactFields.forEach((el) => {
-  //     el.classList.add("hidden");
-  //   });
-
-  //   if (kontakt.value == "epost") {
-  //     document.querySelector("#epost-p").classList.remove("hidden");
-  //   } else if (kontakt.value == "telefon") {
-  //     document.querySelector("#telefon-p").classList.remove("hidden");
-  //   }
 });
