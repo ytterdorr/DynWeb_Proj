@@ -1,3 +1,7 @@
+/* Validatorn klarar visst inte css-variabler...  
+https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables
+*/
+
 .widget {
   display: flex;
   flex-direction: column;

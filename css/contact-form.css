@@ -1,3 +1,7 @@
+/* Validatorn klarar visst inte css-variabler...  
+https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables
+*/
+
 #contact-form {
   margin: auto;
   display: flex;
@@ -5,7 +9,6 @@
   width: 80%;
   align-items: center;
   justify-content: center;
-  box-shadow: 5px;
 }
 
 form fieldset {

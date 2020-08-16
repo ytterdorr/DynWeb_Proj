@@ -1,19 +1,7 @@
-/*
-Några färger tagna med pipettverktyg från bilderna
-Brun-orange (Från husväggar): ​ 7b3a10
-, ​ da8f29
-.
-Blått (Tak och hav): ​ 323755
-, ​ 6e8aa0
-, ​ 55708e
-Gråvitt (Båtar och stenar): ​ f7e5d1
-, ​ fffefa
-Grönt (Träd och gräs):​ 406700
-, b3b106
-, ​ 8c9401
-.
-,
+/* Validatorn klarar visst inte css-variabler...  
+https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables
 */
+
 @font-face {
   font-family: "Rowdies Regular";
   src: url("/fonts/Rowdies/Rowdies-Regular.ttf");
@@ -57,7 +45,6 @@ html {
 
 body {
   background-color: var(--white1);
-  font-size: ;
 }
 
 h1 {
@@ -92,6 +79,10 @@ p {
   /* margin-bottom: ; */
 }
 
+a {
+  color: var(--brown1);
+}
+
 svg {
   display: inline;
   transform-origin: center;
@@ -117,7 +108,7 @@ dt {
 }
 dd {
   display: block;
-  margin-inline-start: 20px;
+  margin-left: 2rem;
 }
 
 /* Containers */
@@ -281,6 +272,8 @@ figure figcaption {
 
   .side-widget {
     height: fit-content;
+    padding: 1.5rem;
+    padding-top: 0.5rem;
   }
 
   .side-widget tr {
@@ -292,6 +285,7 @@ figure figcaption {
     border: 1px solid var(--blue3);
     padding: 2px;
     color: var(--white2);
+    font-size: 0.9rem;
   }
 
   .side-widget th {
@@ -323,7 +317,7 @@ figure figcaption {
 /* Mobile screen Portrait mode */
 @media screen and (max-width: 600px) {
   header {
-    background-image: src("../bilder/livboj-600x400.jpg");
+    background-image: url("../bilder/livboj-600x400.jpg");
   }
 
   .left-side {
@@ -331,9 +325,9 @@ figure figcaption {
     left: -80vw;
     top: 2vh;
     width: 80vw;
-    height: 80vh;
+    height: 90vh;
     max-width: none;
-    max-height: 80vh;
+    max-height: 90vh;
     font-size: 1.5rem;
     border: 2px solid white;
     border-left: none;
