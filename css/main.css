@@ -4,17 +4,17 @@ https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-v
 
 @font-face {
   font-family: "Rowdies Regular";
-  src: url("/fonts/Rowdies/Rowdies-Regular.ttf");
+  src: url("../fonts/Rowdies/Rowdies-Regular.ttf");
 }
 
 @font-face {
   font-family: "Rowdies Bold";
-  src: url("/fonts/Rowdies/Rowdies-Bold.ttf");
+  src: url("../fonts/Rowdies/Rowdies-Bold.ttf");
 }
 
 @font-face {
   font-family: Caveat;
-  src: url("/fonts/Caveat/Caveat-Bold.ttf");
+  src: url("../fonts/Caveat/Caveat-Bold.ttf");
 }
 
 .comment {
@@ -122,7 +122,7 @@ header {
   background-color: var(--blue2);
   height: 6rem;
   /* Livboj */
-  background-image: url(/bilder/livboj-1000x662.jpg);
+  background-image: url(../bilder/livboj-1000x662.jpg);
   background-position: 50% 43%;
 
   background-size: cover;

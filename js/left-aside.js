@@ -2,10 +2,11 @@ let leftSide = document.querySelector(".left-side");
 console.log(leftSide);
 
 let relPath;
-if (window.location.origin == "https://ytterdorr.github.io") {
-  relPath = "/Djupvik";
+if (window.location.href.includes("index.html")) {
+  console.log("index page")
+  relPath = ".";
 } else {
-  relPath = "";
+  relPath = "..";
 }
 
 leftSide.innerHTML = `
