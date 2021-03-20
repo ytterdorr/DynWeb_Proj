@@ -1,5 +1,4 @@
 # DynWeb_Proj
 
-Project for course in Dynamical Web Apps.
+Project for a course in Dynamical Web Applications.
 
-Expects to have images in separate folder not tracked.
